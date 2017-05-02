@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<link type="text/css" rel="stylesheet" href="css/stylependu.css"> 
+		 
 		<meta charset="UTF-8"/>
 		<title>Le Jeu du pendu</title>
+		<link type="text/css" rel="stylesheet" href="css/stylependu.css">
 		<meta name="description=" content="Le jeu du pendu en HTML, CSS et JavaScript">
 		<meta name="Keywords" content="code, js, html, css, jeu, pendu, exercice, mot">
 		<meta name="Revisit-After" content="15 days">
@@ -33,6 +34,8 @@
         <meta name="msapplication-TileImage" content="favicon-144.png">
         <meta name="msapplication-TileColor" content="#FFFFFF">
 		<link rel="icon" href="favicon/animated_favicon.gif" type="image/gif">
+		
+		
 	</head>
     <body>
         <section id="page">
@@ -49,13 +52,13 @@
             </div>
             
             <div class="images">
-                <img class="p0 cacher" src="image/pendu0.png" width="264" height="290" alt="dessin de la potence">
-                <img class="p1 cacher" src="image/pendu1.png" width="264" height="290" alt="dessin de la potence + corde">
-                <img class="p2 cacher" src="image/pendu2.png" width="264" height="290" alt="dessin de la potence + corde + tete">
-                <img class="p3 cacher" src="image/pendu3.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps">
-                <img class="p4 cacher" src="image/pendu4.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche">
-                <img class="p5 cacher" src="image/pendu5.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche + bras droit">
-                <img class="p6 cacher" src="image/pendu6.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche + bras droit + langue">
+                <img class="p0 cacher" class="imgpendu" src="image/pendu0.png" width="264" height="290" alt="dessin de la potence">
+                <img class="p1 cacher" class="imgpendu" src="image/pendu1.png" width="264" height="290" alt="dessin de la potence + corde">
+                <img class="p2 cacher" class="imgpendu" src="image/pendu2.png" width="264" height="290" alt="dessin de la potence + corde + tete">
+                <img class="p3 cacher" class="imgpendu" src="image/pendu3.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps">
+                <img class="p4 cacher" class="imgpendu" src="image/pendu4.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche">
+                <img class="p5 cacher" class="imgpendu" src="image/pendu5.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche + bras droit">
+                <img class="p6 cacher" class="imgpendu" src="image/pendu6.png" width="264" height="290" alt="dessin de la potence + corde + tete + corps + bras gauche + bras droit + langue">
             </div>
             
             <div class="reponse">_ _ _ _ _ _ _ _ _ _ _</div>
@@ -65,7 +68,7 @@
             <div class="contClavier">
                 <table id="clavier">
                  <tr>
-                  <td class="a">A</td> <!--mettre un evenement click et/ou entrer sur les touches-->
+                  <td class="a">A</td> <!--mettre un evenement click et/ou entree sur les touches-->
                   <td class="b">B</td>
                   <td class="c">C</td>
                   <td class="d">D</td>
@@ -108,10 +111,8 @@
             </div>
         
             <a class="lien" href="javascript:location.reload();">Rejouer</a>
-        
-        
-        
-        </section>
+         </section>
+            <script src="js/script.js"></script>
     </body>
 </html>
         
