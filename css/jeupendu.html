@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendu js</title>
+</head>
+<body>
+    <h2>Le pendu en JS</h2>
+    <script>
+        
+        
+        
+        
+        var motMystere;
+
+        var mots = ["javascript", "bonjour", "decouverte", "youpi", "code", "lexomil", "desespoir", "absurde", "fastidieux", "malchanceux"];
+            console.log(mots);
+
+
+        var motMystere = mots[Math.floor(Math.random()*mots.length)];
+        //choix d'un mot dans le tableau//
+        console.log(motMystere);
+        
+        // boucle qui calcul le nbr de lettre dans le mot mystere
+        for(i=0; i<motMystere.length; i++){
+    
+        var input = document.createElement("input");// creation des input par rapport a la longeur du mot
+            document.body.appendChild(input);
+
+        var lettre = motMystere.charAt(i); // ce qui permet de comparer les lettres du mot dans le imput
+            console.log(lettre);
+        }
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

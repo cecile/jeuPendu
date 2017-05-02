@@ -9,6 +9,21 @@ body{
     
 }
 
+.images{
+    width: 280px;
+    height: 320px;
+    background-image: url("../image/imgPendu.png");
+    background-position: -16px;
+    margin: 0; 
+    background-color: white;
+    border: 5px grey solid; 
+}
+
+.contenair{
+    display: flex;
+    justify-content: space-around;
+}
+
 .titre{
     text-align: center;
     border: 3px white solid;
@@ -36,6 +51,7 @@ h2{
 .texte{
     margin-top: 70px;
     margin-bottom: 50px;
+     
     
 }
 
@@ -43,48 +59,25 @@ h2{
     margin: auto;
     text-align: center;
     font-size: 25px;
-    letter-spacing: 2px;   
+    letter-spacing: 2px; 
+    width: 50%;  
 }
-
-.images{
-    margin: 0;
-    display: flex;
-    position: absolute;
-    left: 0;
-   
-}
-
-/*.imgpendu{
-    position: relative;
-}
-
-/*.cacher{
-    visibility: hidden;
-}*/
 
 
 .reponse{
     justify-content: center;
-    display: flex;
+    height: 40%;
     font-size: 60px;
+    padding-top: 80px;
 }
 
-input{
-    width: 30%;
-    height: 40px;
-    border: 1px solid white;
-    background-color: black;
-    display: flex;
-}
+   
 
-.contClavier{
-    
-}
 #clavier{
     display: flex;
     justify-content: flex-end;
     font-size: 60px;
-    margin-right: 300px;
+    
     letter-spacing: 5px;
     text-align: center;
     margin-top: 0;
@@ -94,8 +87,20 @@ input{
     margin: auto;
     text-align: center;
     font-size: 30px;
+    width: 40%;
+    margin-bottom: 50px;
 }
 
+#motAtrouver{
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    margin: auto;
+    
+}
 a{
     
     text-decoration: none;
@@ -105,11 +110,16 @@ a{
     padding-right: 20px;
     border: 3px solid gray;
     background-color: white;
-    width: 5%;
+    width: 132px;
     display: block;
     margin: auto;
+    margin-bottom: 80px;
 }
 
 a:hover{
     cursor: crosshair;
+}
+
+.cacher{
+    display: none;
 }
