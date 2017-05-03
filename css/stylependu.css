@@ -6,6 +6,7 @@ body{
     background-color: black;
     font-family: 'Love Ya Like A Sister', cursive;
     color: white;
+    position: relative;
     
 }
 
@@ -122,4 +123,20 @@ a:hover{
 
 .cacher{
     display: none;
+}
+
+.lettre:hover{
+    cursor: crosshair;
+    
+}
+
+.boite{
+    background-color: greenyellow;
+    height: 30px;
+    color: black;
+    width: 70px;
+   
+    
+    
+   
 }
