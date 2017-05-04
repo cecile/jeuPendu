@@ -33,36 +33,46 @@ function verifier(){
     var boiteL = document.getElementsByClassName("boite");    // boite qui contient les lettres (input)
     var recup = this.innerText;                               // recupere la lettre au click du clavier
     var state = false;                                        // var etat = 
+    var str = "";
     
     if(coupjouer < nombrecoup){
-        
+        var resultat ="";
         for(i=0; i < motMystereMaj.length; i++){
-
+            
             if(motMystereMaj[i] == recup ){
                 boiteL[i].value = recup;                //afficher et recuperer la valeur du clic dans l'input si correspond au mot
                 state = true;  
-            }               
-               
+            } 
+            str += boiteL[i].value; 
+          
         } 
+        //console.log(str);
     
-    gagner.classList.remove("cacher");
+        // gagner
         
-    }else {                                           //PERDU
-        perdu.classList.remove("cacher");             // enleve la classe cacher et affiche la phrase perdu
+    if(str == motMystereMaj){
+        gagner.classList.remove("cacher");
+        afficheReponse.innerHTML = motMystereMaj;
+        
+   }
+        
+    //gagner.classList.remove("cacher");
+        
+    }else{                                             //PERDU
+        perdu.classList.remove("cacher");              // enleve la classe cacher et affiche la phrase perdu
         afficheReponse.innerHTML = motMystereMaj;     // recupere la div reponse html et affiche le mot a trouver
-        
-    }  
-    if(state == false){
-        if(coupjouer >= 0 && coupjouer <7){
-        coupjouer++;
-         console.log(coupjouer);
-        
-        images[0].src = "image/pendu"+(coupjouer)+".png";
-        }
-        }
-        //console.log(images[0].src = "image/pendu"+(coupjouer)+".png");
-        
         
     }
     
-   
+    if(state == false){
+        if(coupjouer >= 0 && coupjouer <7){
+        coupjouer++;
+         //console.log(coupjouer);
+        
+        images[0].src = "image/pendu"+(coupjouer)+".png";
+        }
+    }
+        //console.log(images[0].src = "image/pendu"+(coupjouer)+".png");
+        
+           
+    }   
