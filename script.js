@@ -1,6 +1,9 @@
   
 
-var image = new Image();                                   //image.src = "imgPendu.png";
+var images = document.getElementsByClassName("p");
+var perdu = document.querySelector(".perdu");              // var qui recupere la phrase lorsque l'on perd
+var gagner = document.querySelector(".gagner");              // var qui recupere la phrase lorsque l'on perd
+var afficheReponse = document.getElementById("solut");      // recup id solut html
 var motMystere;                                            //var mots = new Array() remplacé par []
 var mots = ["javascript", "bonjour", "decouverte", "youpi", "code", "lexomil", "desespoir", "absurde", "fastidieux", "malchanceux"];
 var nombrecoup = 7;                                        //nombre de chances//
@@ -9,7 +12,9 @@ var clavier = document.querySelectorAll(".lettre");        //variable clavier qu
 var motMystere = mots[Math.floor(Math.random()*mots.length)];//choix d'un mot dans le tableau//   
 var motMystereMaj = motMystere.toUpperCase();
 var divBoite = document.querySelector(".reponse");
-          
+
+      //boucle
+
 for(i=0; i<motMystereMaj.length; i++){                      //boucle qui calcul le nbr de lettre dans le mot mystere
     var input = document.createElement("input");            //creation des input par rapport a la longeur du mot
     divBoite.appendChild(input);                            //dans la divBoite tu cree la variable input
@@ -21,20 +26,43 @@ for(i=0; i<clavier.length; i++){
     clavier[i].addEventListener("click",verifier);          // boucle qui mets un evenement click a toutes les classes lettre 
 }
 
-function verifier(){                                        // fonction qui vas recuperer le contenu html et l'attribut au click
-    coupjouer++
-    var boiteL = document.getElementsByClassName("boite");    
-    var recup = this.innerText;
+// fonction qui vas recuperer le contenu html et l'attribut au click
 
-    if(coupjouer < 8){
+function verifier(){                                        
+    
+    var boiteL = document.getElementsByClassName("boite");    // boite qui contient les lettres (input)
+    var recup = this.innerText;                               // recupere la lettre au click du clavier
+    var state = false;                                        // var etat = 
+    
+    if(coupjouer < nombrecoup){
         
         for(i=0; i < motMystereMaj.length; i++){
 
             if(motMystereMaj[i] == recup ){
-                boiteL[i].value = recup;                //afficher et recuperer la valeur du clic dans l'inout si correspond au mot
-            }
-        }    
-    }else {
-        alert("vous avez perdu!!!!!!!!")
+                boiteL[i].value = recup;                //afficher et recuperer la valeur du clic dans l'input si correspond au mot
+                state = true;  
+            }               
+               
+        } 
+    
+    gagner.classList.remove("cacher");
+        
+    }else {                                           //PERDU
+        perdu.classList.remove("cacher");             // enleve la classe cacher et affiche la phrase perdu
+        afficheReponse.innerHTML = motMystereMaj;     // recupere la div reponse html et affiche le mot a trouver
+        
+    }  
+    if(state == false){
+        if(coupjouer >= 0 && coupjouer <7){
+        coupjouer++;
+         console.log(coupjouer);
+        
+        images[0].src = "image/pendu"+(coupjouer)+".png";
+        }
+        }
+        //console.log(images[0].src = "image/pendu"+(coupjouer)+".png");
+        
+        
     }
-}
+    
+   

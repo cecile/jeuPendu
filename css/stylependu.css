@@ -11,9 +11,10 @@ body{
 }
 
 .images{
-    width: 280px;
-    height: 320px;
-    background-image: url("../image/imgPendu.png");
+    width: 310px;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-top: 30px;
     background-position: -16px;
     margin: 0; 
     background-color: white;
@@ -135,6 +136,10 @@ a:hover{
     height: 30px;
     color: black;
     width: 70px;
+    font-family:  'Love Ya Like A Sister', cursive;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
    
     
     
