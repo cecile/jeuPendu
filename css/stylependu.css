@@ -121,6 +121,7 @@ a:hover{
 
 .cacher{
     display: none;
+
 }
 
 .lettre:hover{
@@ -136,9 +137,133 @@ a:hover{
     font-family:  'Love Ya Like A Sister', cursive;
     text-align: center;
     font-size: 30px;
-    font-weight: bold;
-   
-    
-    
-   
+    font-weight: bold; 
+}
+
+.gagner{
+    font-size: 40px;
+}
+
+/*media queries ordi */
+@media screen and (min-width: 993px) and (max-width: 1200px) and (orientation: landscape){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+/* tablettes */
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+/* portables paysage */
+@media screen and (min-width: 544px) and (max-width: 767px) and (orientation: landscape){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/*  portable portrait */
+@media screen and (min-width: 330px) and (max-width: 480px) and (orientation: landscape){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
