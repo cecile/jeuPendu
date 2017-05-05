@@ -98,8 +98,7 @@ h2{
 #resultat{
     margin: auto;
     text-align: center;
-    font-size: 60px;
-    
+    font-size: 60px; 
     margin-bottom: 50px;
 }
 
@@ -114,8 +113,11 @@ p{
     font-size: 30px;
     
 }
+
+.gagner{
+    font-size: 60px;
+}
 a{
-    
     text-decoration: none;
     font-size: 40px;
     color: black;
@@ -139,12 +141,12 @@ a:hover{
 }
 
 .lettre:hover{
-    cursor: crosshair;
+    cursor: pointer;
     
 }
 
 .boite{
-    background-color: greenyellow;
+    background-color: white;
     height: 30px;
     color: black;
     width: 70px;
@@ -154,14 +156,16 @@ a:hover{
     font-weight: bold; 
 }
 
+.s{
+   
+}
 
 
 /*media queries ordi */
 @media screen and (min-width: 993px) and (max-width: 1200px) and (orientation: landscape){
 
-h2{
-    font-size: 35px;
-}
+
+
 
 
 

@@ -1,5 +1,3 @@
-  
-
 var images = document.getElementsByClassName("p");
 // var qui recupere la phrase lorsque l'on perd et on gagne
 var perdu = document.querySelector(".perdu");              
@@ -9,7 +7,7 @@ var afficheReponse = document.getElementById("solut");
 //var motMystere;  
 //var mots = new Array() remplacé par []                                          
 var mots = ["javascript", "bonjour", "decouverte", "youpi", "code", "lexomil", "desespoir", "absurde", "fastidieux", "malchanceux"];
- //nombre de chances//
+//nombre de chances//
 //var nombrecoup = 6; 
 //depart//                                      
 var coupjouer = 1;  
@@ -24,16 +22,17 @@ var divBoite = document.querySelector(".reponse");
 var cpt = 7;
 var recupCpt = document.querySelector(".compteur");
 var afficheCpt = document.querySelector(".divCpt"); 
+var chance = document.querySelector(".s");
 //boucle qui calcul le nbr de lettre dans le mot mystere
 
 for(i=0; i<motMystereMaj.length; i++){ 
-//creation des input par rapport a la longeur du mot                     
+    //creation des input par rapport a la longeur du mot                     
     var input = document.createElement("input"); 
-//dans la divBoite tu cree la variable input           
+    //dans la divBoite tu cree la variable input           
     divBoite.appendChild(input); 
-//ce qui permet de comparer les lettres du mot dans le input : charAt.                           
+    //ce qui permet de comparer les lettres du mot dans le input : charAt.                           
     var lettre = motMystereMaj.charAt(i); 
-//ajoute une classe css a chaque input creer par le js                  
+    //ajoute une classe css a chaque input creer par le js                  
     input.classList.add("boite");                                                               
 }
  
@@ -58,24 +57,19 @@ function verifier(){
     if(coupjouer < cpt){
         var resultat ="";
         for(i=0; i < motMystereMaj.length; i++){
-            
             //afficher et recuperer la valeur du clic dans l'input si correspond au mot
             if(motMystereMaj[i] == recup ){
                 boiteL[i].value = recup;                
                 state = true;  
             } 
             str += boiteL[i].value; 
-          
-        } 
-            //console.log(str);
-    
-            //GAGNER
-        
-    if(str == motMystereMaj){
-        gagner.classList.remove("cacher");
-        afficheReponse.innerHTML = motMystereMaj;
-        clavier[i].classList.remove("click",images);
-    }
+        }
+          //GAGNER
+        if(str == motMystereMaj){
+            gagner.classList.remove("cacher");
+            afficheReponse.innerHTML = motMystereMaj;
+            clavier[i].classList.remove("click",images);
+        }
         
         //PERDU
         
@@ -85,27 +79,24 @@ function verifier(){
         // recupere la div reponse html et affiche le mot a trouver            
         afficheReponse.innerHTML = motMystereMaj; 
         gagner.classList.add("cacher");
+        //cache le compteur qd la phrase perdu s'affiche
+        afficheCpt.classList.add("cacher");
         if(cpt = 1){
             for(i=0; i<clavier.length; i++){
                 clavier[i].removeEventListener("click",verifier);          
             }
         }
-        
-        
-        
-        
     }
     
     if(state == false){
-        //if(coupjouer >= 0 && coupjouer <7){
-            //coupjouer++;
-            //console.log(coupjouer);
-            // changement d'images si on perd
-            
-            cpt = cpt-1;
-            recupCpt.innerHTML = " "+ cpt +" ";
-            images[0].src = "image/pendu"+(cpt)+".png";
-            afficheCpt.classList.remove("divCpt");
-        }
-    //}        
+        cpt = cpt-1;
+        recupCpt.innerHTML = " "+ cpt +" ";
+        images[0].src = "image/pendu"+(cpt)+".png";
+        afficheCpt.classList.remove("divCpt");
+    }
+    
+    if(cpt < 2){
+        chance.innerHTML=" ";
+    }
 }   
+
