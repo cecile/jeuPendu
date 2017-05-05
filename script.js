@@ -10,9 +10,9 @@ var afficheReponse = document.getElementById("solut");
 //var mots = new Array() remplacé par []                                          
 var mots = ["javascript", "bonjour", "decouverte", "youpi", "code", "lexomil", "desespoir", "absurde", "fastidieux", "malchanceux"];
  //nombre de chances//
-var nombrecoup = 7; 
+//var nombrecoup = 6; 
 //depart//                                      
-var coupjouer = 0;  
+var coupjouer = 1;  
 //variable clavier qui selectionne toutes les lettres                                       
 var clavier = document.querySelectorAll(".lettre"); 
 //choix d'un mot dans le tableau//        
@@ -21,8 +21,9 @@ var motMystere = mots[Math.floor(Math.random()*mots.length)];
 var motMystereMaj = motMystere.toUpperCase();
 // recup clavier
 var divBoite = document.querySelector(".reponse");
-
-    
+var cpt = 7;
+var recupCpt = document.querySelector(".compteur");
+var afficheCpt = document.querySelector(".divCpt"); 
 //boucle qui calcul le nbr de lettre dans le mot mystere
 
 for(i=0; i<motMystereMaj.length; i++){ 
@@ -54,7 +55,7 @@ function verifier(){
     // var str vide qui permet de concatener avec les valeurs des input contenu dans boiteL                                      
     var str = "";
     
-    if(coupjouer < nombrecoup){
+    if(coupjouer < cpt){
         var resultat ="";
         for(i=0; i < motMystereMaj.length; i++){
             
@@ -66,32 +67,45 @@ function verifier(){
             str += boiteL[i].value; 
           
         } 
-        //console.log(str);
+            //console.log(str);
     
-        // gagner
+            //GAGNER
         
     if(str == motMystereMaj){
         gagner.classList.remove("cacher");
         afficheReponse.innerHTML = motMystereMaj;
-        
+        clavier[i].classList.remove("click",images);
     }
         
-    //PERDU
+        //PERDU
         
     }else{    
         // enleve la classe cacher et affiche la phrase perdu                                         
         perdu.classList.remove("cacher");  
         // recupere la div reponse html et affiche le mot a trouver            
-        afficheReponse.innerHTML = motMystereMaj;     
+        afficheReponse.innerHTML = motMystereMaj; 
+        gagner.classList.add("cacher");
+        if(cpt = 1){
+            for(i=0; i<clavier.length; i++){
+                clavier[i].removeEventListener("click",verifier);          
+            }
+        }
+        
+        
+        
         
     }
     
     if(state == false){
-        if(coupjouer >= 0 && coupjouer <7){
-            coupjouer++;
+        //if(coupjouer >= 0 && coupjouer <7){
+            //coupjouer++;
             //console.log(coupjouer);
             // changement d'images si on perd
-            images[0].src = "image/pendu"+(coupjouer)+".png";
+            
+            cpt = cpt-1;
+            recupCpt.innerHTML = " "+ cpt +" ";
+            images[0].src = "image/pendu"+(cpt)+".png";
+            afficheCpt.classList.remove("divCpt");
         }
-    }        
+    //}        
 }   

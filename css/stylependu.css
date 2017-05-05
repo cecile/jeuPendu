@@ -60,7 +60,7 @@ h2{
 .regle{
     margin: auto;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 2px; 
     width: 50%;  
 }
@@ -73,7 +73,20 @@ h2{
     padding-top: 80px;
 }
 
-   
+.divCpt{
+    display: flex;
+    display: none;
+    
+}  
+.align{
+    text-align: center;
+}
+/*.compteur{
+    width: 40px;
+    height: 40px;
+    /*color: white;*/
+    
+  
 
 #clavier{
     font-size: 60px;
@@ -85,8 +98,8 @@ h2{
 #resultat{
     margin: auto;
     text-align: center;
-    font-size: 30px;
-    width: 40%;
+    font-size: 60px;
+    
     margin-bottom: 50px;
 }
 
@@ -98,6 +111,7 @@ h2{
 
 p{
     margin: auto;
+    font-size: 30px;
     
 }
 a{
@@ -140,14 +154,14 @@ a:hover{
     font-weight: bold; 
 }
 
-.gagner{
-    font-size: 40px;
-}
+
 
 /*media queries ordi */
 @media screen and (min-width: 993px) and (max-width: 1200px) and (orientation: landscape){
 
-
+h2{
+    font-size: 35px;
+}
 
 
 
