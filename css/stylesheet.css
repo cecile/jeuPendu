@@ -1,6 +1,7 @@
 
 body{
     margin: auto;
+    height: auto;
     /*width: 100vw;*/
     /*height: 100vh; */
     width: 100%;
@@ -205,6 +206,7 @@ h2{
         padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
+        margin:auto;
     }
 
  p{
@@ -220,52 +222,47 @@ h2{
 
     #clavier{
         font-size: 40px;
+        margin: auto;
     }
 
 
 
 .contenair {
-    display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
     }
 
 
 .reponse {
-    /*display: flex;*/
-    margin: auto;
+    margin: 0;
     position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    padding-top: 0px;
+    }
+
+
+.perdu{
+    padding-top: 30px;
+   }
+#resultat{
+    font-size: 40px;
+   }
+
+a{
+    font-size: 20px;
+    margin: auto;
     text-align: center;
-    top: 190px;
-    padding-top: 100px;
-   
+    margin-bottom: 50px;
+   }
+.contClavier{
+    padding-top: 20px;
     }
-
-.align{
-       padding-top: 50px;
-    }
-
-    .perdu{
-        padding-top: 30px;
-    }
-
-    #resultat{
-        font-size: 40px;
-    }
-
-    a{
-        font-size: 20px;
-        margin: auto;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .contClavier{
-        padding-top: 20px;
-    }
-    #solut{
-        letter-spacing: 2px;
+    
+#solut{
+      letter-spacing: 2px;
     }
 
 }
@@ -290,47 +287,57 @@ h2{
         width: inherit;
     }
 
-
-.contenair {
-    display: flex;
-    text-align: center;
-    padding-top: 50px;
+    .texte{
+        margin-top: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
     }
-
-.reponse {
     
-    margin: auto;
-    position: absolute;
+    .contenair {
+    flex-direction: column;
     text-align: center;
-    top: 150px;
-    padding-top: 75px;
-   
+    padding-top: 100px;
     }
 
- .images .p{
+
+     .reponse {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    padding-top: 0px;
+    }
+
+    .images .p{
         width: 200px;
         height: 210px;
     }
 
-.images{
+     .images{
         width: 206px;
         height: 200px;
         padding-bottom: 18px;
         padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
+        margin: auto;
     }
 
-.boite{
+    .boite{
         font-size: 20px;
     }
 
-#clavier{
+
+    #clavier{
         font-size: 30px;
         padding-top: 30px;
+        margin: auto;
 }
 
-p{
+    p{
         font-size: 20px;
 }
 
@@ -397,7 +404,6 @@ a{
     }
 
     .reponse {
-    
     margin: 0;
     position: absolute;
     width: 100%;
@@ -435,7 +441,7 @@ a{
         font-size: 30px;
         padding-top: 30px;
         margin: auto;
-}
+    }
 
     p{
         font-size: 15px;
