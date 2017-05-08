@@ -274,7 +274,7 @@ h2{
 
 /* portables paysage */
 
-@media screen and (min-width: 544px) and (max-width: 767px) and (orientation: landscape){
+@media screen and (min-width: 543px) and (max-width: 767px){
 
     .titre{
         width: 80%;
