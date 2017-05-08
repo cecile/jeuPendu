@@ -1,8 +1,9 @@
 
 body{
     margin: auto;
-    width: 100vw;
-    height: 100vh; 
+    /*width: 100vw;*/
+    /*height: 100vh; */
+    width: 100%;
     background-color: black;
     font-family: 'Love Ya Like A Sister', cursive;
     color: white;
@@ -147,57 +148,124 @@ a:hover{
 
 .boite{
     background-color: white;
-    height: 30px;
+    height: auto;
     color: black;
-    width: 70px;
-    font-family:  'Love Ya Like A Sister', cursive;
+    width: 45px;
+    font-family: 'Love Ya Like A Sister', cursive;
     text-align: center;
     font-size: 30px;
     font-weight: bold; 
+    border: 1px solid gray;
+    
 }
 
 .s{
    
 }
 
-
-/*media queries ordi */
-@media screen and (min-width: 993px) and (max-width: 1200px) and (orientation: landscape){
-
+/*--------------------------------------- MEDIA QUERRIES-------------------------------------------- */
+/* IPAD PRO*/
 
 
+/* PETITS ORDIS */
+/*@media screen and (min-width: 992px) and (max-width: 1199px) {*/
+
+@media screen and (min-width: 700px) and (max-width: 2000px){
+
+.titre{
+    width: 50%;
+    margin-top: 50px;
+    }
+
+h2{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    display: inline;
+    margin: 0;  
+    letter-spacing: 2px;
+}
+
+    .regle{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+
+    .images .p{
+        width: 206px;
+        height: 225px;
+    }
+
+    .images{
+        width: 206px;
+        height: 215px;
+        padding-bottom: 18px;
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+ p{
+    margin-bottom: 10px;
+    font-size: 20px;
+     
+    }
+
+    
+    .boite{
+        font-size: 20px;
+    }
+
+    #clavier{
+        font-size: 40px;
+    }
 
 
 
+.contenair {
+    display: flex;
+    /*flex-direction: column;*/
+    text-align: center;
+    padding-top: 50px;
+    }
 
 
+.reponse {
+    /*display: flex;*/
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+    padding-top: 100px;
+   
+    }
 
+.align{
+       padding-top: 50px;
+    }
 
+    .perdu{
+        padding-top: 30px;
+    }
 
+    #resultat{
+        font-size: 40px;
+    }
 
+    a{
+        font-size: 20px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .contClavier{
+        padding-top: 20px;
+    }
+    #solut{
+        letter-spacing: 2px;
+    }
 
 }
 /* tablettes */
